@@ -1,0 +1,182 @@
+"use client";
+
+import React, { useState } from "react";
+import { ArrowRight, ExternalLink, Mail, CheckCircle2, Send } from "lucide-react";
+import { portfolioConfig } from "@/data/portfolioData";
+import { ScrollReveal } from "@/components/ScrollReveal";
+
+export default function ContactCTASection() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    growthType: "A business",
+    message: "",
+  });
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      const res = await fetch("/api/lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setSubmitted(true);
+      }
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <section
+      id="contact-section"
+      className="min-h-[90vh] lg:min-h-screen flex flex-col justify-center py-20 lg:py-24 container mx-auto px-6 bg-slate-950 max-w-5xl rounded-[3.5rem] my-16 shadow-2xl text-white relative overflow-hidden"
+    >
+      {/* Background glow elements */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
+
+      <ScrollReveal duration={0.7} yOffset={30} className="relative z-10 max-w-3xl mx-auto text-center">
+        <div className="inline-block px-4 py-1 rounded-full bg-slate-900 border border-slate-800 text-primary text-xs font-black uppercase tracking-widest mb-6">
+          Ready To Scale
+        </div>
+
+        <h2 className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight mb-8 leading-tight">
+          Have Something You <br />
+          <span className="text-primary">Want To Grow?</span>
+        </h2>
+
+        {/* Growth items list */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-10 text-slate-300 font-bold text-sm sm:text-base">
+          <div className="p-3.5 rounded-2xl bg-slate-900/90 border border-slate-800/80 shadow-xs">
+            A business.
+          </div>
+          <div className="p-3.5 rounded-2xl bg-slate-900/90 border border-slate-800/80 shadow-xs">
+            A campaign.
+          </div>
+          <div className="p-3.5 rounded-2xl bg-slate-900/90 border border-slate-800/80 shadow-xs">
+            A personal brand.
+          </div>
+          <div className="p-3.5 rounded-2xl bg-slate-900/90 border border-slate-800/80 shadow-xs">
+            An idea.
+          </div>
+        </div>
+
+        <p className="text-2xl sm:text-3xl font-black text-white mb-10">
+          Let&apos;s talk.
+        </p>
+
+        {/* Quick Action Links */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <a
+            href={portfolioConfig.linkedinUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary py-4 px-8 text-base shadow-xl shadow-primary/30 inline-flex items-center gap-2 w-full sm:w-auto justify-center"
+          >
+            Connect on LinkedIn <ExternalLink size={18} />
+          </a>
+          <a
+            href={`mailto:${portfolioConfig.email}?subject=Growth%20Inquiry%20from%20Portfolio`}
+            className="bg-slate-900 hover:bg-slate-800 text-white border border-slate-800 py-4 px-8 rounded-full font-bold text-base shadow-sm transition-all w-full sm:w-auto inline-flex items-center justify-center gap-2"
+          >
+            <Mail size={18} /> Send Direct Email
+          </a>
+        </div>
+
+        {/* Contact / Inquiry Form */}
+        <div className="bg-slate-900/90 border border-slate-800 rounded-[2.5rem] p-6 sm:p-10 text-left shadow-xl">
+          {submitted ? (
+            <div className="text-center py-8">
+              <CheckCircle2 size={48} className="text-primary mx-auto mb-4 animate-bounce" />
+              <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
+              <p className="text-slate-400 text-sm">
+                Thanks for reaching out. I&apos;ll review your project and get back to you within 24 hours.
+              </p>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <h3 className="text-xl font-bold text-white mb-4 text-center sm:text-left">
+                Or drop a quick message here:
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">
+                    Your Name
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    placeholder="e.g. Rahul Sharma"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-primary text-sm"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    required
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    placeholder="name@company.com"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-primary text-sm"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">
+                  What do you want to grow?
+                </label>
+                <select
+                  value={formData.growthType}
+                  onChange={(e) => setFormData({ ...formData, growthType: e.target.value })}
+                  className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white focus:outline-none focus:border-primary text-sm"
+                >
+                  <option value="A business">A business (Leads &amp; Customer Acquisition)</option>
+                  <option value="A campaign">A specific paid ad campaign</option>
+                  <option value="A personal brand">LinkedIn Personal Brand for Founder</option>
+                  <option value="An interesting idea">An early-stage idea or startup</option>
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">
+                  Tell me a bit about your goals
+                </label>
+                <textarea
+                  rows={3}
+                  required
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  placeholder="What is your current bottleneck, ad budget, or timeline?"
+                  className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-primary text-sm"
+                />
+              </div>
+
+              <button
+                type="submit"
+                disabled={loading}
+                className="btn-primary w-full py-3.5 text-base shadow-lg shadow-primary/30 inline-flex items-center justify-center gap-2 cursor-pointer"
+              >
+                {loading ? "Sending..." : "Submit Inquiry"} <Send size={16} />
+              </button>
+            </form>
+          )}
+        </div>
+      </ScrollReveal>
+    </section>
+  );
+}
