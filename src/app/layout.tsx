@@ -16,14 +16,14 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: `${portfolioConfig.name} — Growth Campaigns & Performance Marketing`,
-  description: `${portfolioConfig.heroHeadline} ${portfolioConfig.heroSubtitle}`,
+  title: `${portfolioConfig.name} — GTM Strategy & Performance Marketing`,
+  description: `${portfolioConfig.heroHeadline} ${portfolioConfig.heroHeadlineAccent} · ${portfolioConfig.heroTagline}`,
   icons: {
-    icon: "/assets/manas/manas_avatar.png",
+    icon: "/assets/manas/manas_hero_keynote.jpg",
   },
   openGraph: {
     title: `${portfolioConfig.name} — Growth Campaigns & Performance Marketing`,
-    description: portfolioConfig.heroDescription,
+    description: `${portfolioConfig.heroHeadline} ${portfolioConfig.heroHeadlineAccent}`,
     type: "website",
   },
 };

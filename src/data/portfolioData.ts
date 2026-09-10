@@ -1,220 +1,204 @@
-export interface ServiceItem {
+﻿export interface ProofCaseStudy {
   id: string;
+  number: string;
+  tag: string;
   title: string;
+  subtitle: string;
   description: string;
-  icon: string;
-  color: string;
-  bgColor: string;
-}
-
-export interface CaseStudy {
-  id: string;
-  flag?: string;
-  badge: string;
-  title: string;
-  highlight: string;
-  description: string;
-  tags: string[];
+  results: string[];
   metricLabel: string;
   metricValue: string;
-  image?: string;
 }
 
-export interface AudienceItem {
-  title: string;
-  icon: string;
-  desc: string;
-  badge: string;
+export interface GrowthWay {
+  id: string;
+  name: string;
+  headline: string;
+  body: string;
+  punchline: string;
+  emoji: string;
+  bullets: string[];
 }
 
 export const portfolioConfig = {
-  name: "Manas Srivastava",
-  title: "Growth Marketer & Campaign Strategist",
-  heroHeadline: "I Build Growth Campaigns That People Notice. And Businesses Can Measure.",
-  heroSubtitle: "Performance Marketing × AI Campaigns × Creative Strategy × LinkedIn Personal Branding",
-  heroDescription: "I help businesses, founders and individuals turn attention into measurable growth.",
+  name: "MANAS",
+  fullName: "Manas Srivastava",
+  role: "GTM Strategy | Performance | AI Campaigns | LinkedIn",
+  heroHeadline: "I DON'T FOLLOW THE MARKETING PLAYBOOK.",
+  heroHeadlineAccent: "I TEST IT, BREAK IT, AND FIND WHAT WORKS.",
+  heroSubtext: "I work at the intersection of GTM Strategy, Performance Marketing, AI-powered Campaigns and LinkedIn Personal Branding.\n\nThe goal isn't just to make something look good or get attention.\n\nThe goal is to know whether it generated leads, revenue, growth—or absolutely nothing.\n\nBecause if you can't measure marketing, you're mostly guessing.",
+  heroTagline: "Creative thinking × Data × AI × Experimentation",
+  coreStatement: "Creative enough to get attention.\nData-driven enough to prove it worked.",
+  pillarsSummary: "GTM Strategy × Performance Marketing × AI Campaigns × LinkedIn Growth",
   linkedinUrl: "https://www.linkedin.com/in/personalbrandingmanas/",
-  email: "manas@example.com", // or contact
-  calendarUrl: "https://cal.com", // booking link or direct modal
+  whatsappUrl: "https://wa.me/919999999999?text=Hi%20Manas,%20I'd%20like%20to%20talk%20about%20growth%20campaigns.",
+  email: "contact@manassrivastava.com",
 };
 
-export const credibilityStats = [
+export const proofCaseStudies: ProofCaseStudy[] = [
   {
-    value: "₹5–₹40 CPL",
-    label: "On International Campaigns",
-    sublabel: "US-focused Meta Ads with granular targeting & A/B testing",
-    color: "text-primary",
-    bgColor: "bg-blue-50",
-    icon: "target",
-  },
-  {
-    value: "1M+ Impressions",
-    label: "Organic & Paid Growth",
-    sublabel: "Campaigns engineered for scroll-stopping attention",
-    color: "text-blue-600",
-    bgColor: "bg-blue-50",
-    icon: "trending-up",
-  },
-  {
-    value: "4+ Startups",
-    label: "Built, Scaled & Tested",
-    sublabel: "Real skin in the game: C11CL, Markup Media, BlockBuddy & PureWashr",
-    color: "text-green-600",
-    bgColor: "bg-green-50",
-    icon: "building",
-  },
-  {
-    value: "AI × Performance",
-    label: "Next-Gen Campaign Stack",
-    sublabel: "Combining AI creative generation with data-driven paid advertising",
-    color: "text-purple-600",
-    bgColor: "bg-purple-50",
-    icon: "sparkles",
-  },
-];
-
-export const fourWays = [
-  {
-    id: "01",
-    title: "Performance Marketing",
-    emoji: "📈",
-    description: "Meta Ads, Lead Generation, Campaign Optimization, A/B Testing and Scaling.",
-    deliverables: ["Full-Funnel Meta Ad Campaigns", "Continuous A/B Testing & Optimization", "Granular Lead Tracking & Analytics", "Budget Scaling & Pacing Control"],
-    color: "text-primary",
-    bgColor: "bg-blue-50/80",
-    borderColor: "border-blue-100",
-  },
-  {
-    id: "02",
-    title: "AI-Powered Campaigns",
-    emoji: "🤖",
-    description: "AI Creatives, AI Ads, Campaign Concepts and faster creative experimentation.",
-    deliverables: ["AI-Generated Ad Creatives & Video Scripts", "Suno AI Audio & Theme Tracks", "Rapid Angle & Hook Iteration", "Contextual Creative Positioning"],
-    color: "text-purple-600",
-    bgColor: "bg-purple-50/80",
-    borderColor: "border-purple-100",
-  },
-  {
-    id: "03",
-    title: "Creative Campaign Strategy",
-    emoji: "💡",
-    description: "Ideas people remember—not just ads people scroll past.",
-    deliverables: ["Scroll-Stopping Hooks & Angles", "Psychological Offer-Market Fit", "Brand Storytelling That Sells", "High-Converting Landing Copy"],
-    color: "text-amber-600",
-    bgColor: "bg-amber-50/80",
-    borderColor: "border-amber-100",
-  },
-  {
-    id: "04",
-    title: "LinkedIn Personal Branding",
-    emoji: "🔵",
-    description: "Helping founders and professionals turn LinkedIn into a personal brand and lead-generation engine.",
-    deliverables: ["Profile Audit & Positioning Overhaul", "Founder-Led Inbound Content", "Authority Building & Social Proof", "Direct Inbound Lead Funnels"],
-    color: "text-blue-600",
-    bgColor: "bg-blue-50/80",
-    borderColor: "border-blue-100",
-  },
-];
-
-export const targetAudiences: AudienceItem[] = [
-  {
-    title: "Founders",
-    icon: "🚀",
-    desc: "You have a great business. Now let's get more people to know about it.",
-    badge: "Founder-Led Growth",
-  },
-  {
-    title: "Businesses",
-    icon: "🏢",
-    desc: "You need measurable leads, customers and scalable growth.",
-    badge: "Revenue & Leads",
-  },
-  {
-    title: "Professionals",
-    icon: "👤",
-    desc: "You want your LinkedIn profile to build authority and open high-ticket doors.",
-    badge: "Personal Brand",
-  },
-  {
-    title: "Brands",
-    icon: "🎯",
-    desc: "You need campaigns that don't look like every other boring corporate ad.",
-    badge: "Creative Impact",
-  },
-];
-
-export const caseStudies: CaseStudy[] = [
-  {
-    id: "international-leads",
-    flag: "🇺🇸",
-    badge: "Meta Ads & Paid Growth",
+    id: "case-01",
+    number: "01",
+    tag: "US Meta Ads · Acquisition",
     title: "International Lead Generation",
-    highlight: "₹5–₹40 CPL on High-Value Leads",
-    description: "US-focused campaigns using Meta Ads, detailed targeting, A/B testing and continuous optimization to maintain ultra-low cost per acquisition while driving validated leads.",
-    tags: ["Meta Ads", "A/B Testing", "US Lead Gen", "CPL Optimization"],
+    subtitle: "From an idea → to actual conversions",
+    description: "A creative campaign designed to do more than collect views. Engineered with rigorous US audience testing, tailored messaging, and continuous cost optimization.",
+    results: [
+      "₹5–₹40 CPL on High-Value US Leads",
+      "Consistent Inbound Lead Qualification",
+      "Scalable Paid Acquisition Funnel"
+    ],
     metricLabel: "Cost Per Lead",
     metricValue: "₹5–₹40 CPL",
   },
   {
-    id: "c11cl-growth",
-    flag: "🏏",
-    badge: "Head of Growth",
+    id: "case-02",
+    number: "02",
+    tag: "Head of Growth · Scaling",
     title: "Champions 11 Cricket League (C11CL)",
-    highlight: "AI × Performance × Creative Campaigns",
-    description: "End-to-end campaign strategy, Meta Ads management, AI-generated creatives, and multi-channel growth experiments to scale registration and fan engagement.",
-    tags: ["Campaign Strategy", "Meta Ads", "AI Creatives", "Sports Marketing"],
-    metricLabel: "Core Impact",
-    metricValue: "Full-Funnel Scale",
+    subtitle: "Performance over vanity metrics.",
+    description: "Campaigns where every rupee spent had a question attached: “What are we getting back?” Full-funnel campaign architecture combining AI creatives and targeted paid media.",
+    results: [
+      "1M+ Targeted Reach & Community Growth",
+      "Measurable Full-Funnel Registration Volume",
+      "High-Converting AI Creatives + Multi-Channel Rollout"
+    ],
+    metricLabel: "Total Reach",
+    metricValue: "1M+ Impressions",
   },
   {
-    id: "bano-champion",
-    flag: "🎵",
-    badge: "AI Creative Experiment",
-    title: "Bano Champion Anthem",
-    highlight: "We Made a Campaign Song Using AI",
-    description: "From initial campaign concept to a fully produced AI-generated theme song using Suno AI, turning an ordinary promotion into an emotional anthem that captured viral community attention.",
-    tags: ["Suno AI", "Creative Strategy", "Campaign Song", "Viral Audio"],
-    metricLabel: "Content Type",
-    metricValue: "AI Theme Song",
-  },
-  {
-    id: "jagannath-yatra",
-    flag: "🛕",
-    badge: "Contextual AI Ads",
-    title: "Jagannath Yatra Campaign",
-    highlight: "30+ Sales in 2 Days",
-    description: "Leveraged contextual AI creatives and real-time cultural campaign timing to connect with high-intent devotees, converting cold interest into 30+ completed sales within 48 hours.",
-    tags: ["Contextual AI", "Rapid Scaling", "E-commerce", "48-Hour Sprint"],
-    metricLabel: "Speed to Result",
+    id: "case-03",
+    number: "03",
+    tag: "AI Creatives · Rapid Sprint",
+    title: "Jagannath Yatra Sprint & Bano Champion",
+    subtitle: "Attention is useless if it doesn't lead anywhere.",
+    description: "Creative campaigns built to capture attention and move people toward action. From producing an AI-generated anthem with Suno AI to driving 48-hour sprint sales.",
+    results: [
+      "30+ Completed Sales in 48 Hours",
+      "Viral Suno AI Campaign Theme Song Anthem",
+      "Contextual Creative Hooks Turning Intent Into Action"
+    ],
+    metricLabel: "Sprint Result",
     metricValue: "30+ Sales in 48h",
   },
 ];
 
-export const marketingStack = [
-  { name: "Meta Ads", category: "Paid Acquisition", logo: "https://socialmasla-pm.pages.dev/pm/assets/tools_covered/compressed/meta_ads.jpg" },
-  { name: "ChatGPT", category: "AI Strategy", logo: "https://socialmasla-pm.pages.dev/pm/assets/tools_covered/compressed/chatgpt.jpg" },
-  { name: "Claude", category: "Deep Copywriting", logo: "https://socialmasla-pm.pages.dev/pm/assets/tools_covered/compressed/claude-color.webp" },
-  { name: "Suno AI", category: "AI Music & Audio", logo: "https://socialmasla-pm.pages.dev/pm/assets/teams_worked_with/compressed/tiktok.webp" },
-  { name: "AI Creative Tools", category: "Visual Generation", logo: "https://socialmasla-pm.pages.dev/pm/assets/tools_covered/compressed/wordpress.jpg" },
-  { name: "Google Analytics", category: "Analytics & Tracking", logo: "https://socialmasla-pm.pages.dev/pm/assets/tools_covered/compressed/google_analytics_4.jpg" },
-  { name: "Canva", category: "Visual Design", logo: "https://socialmasla-pm.pages.dev/pm/assets/tools_covered/compressed/google_ads.jpg" },
-  { name: "LinkedIn", category: "Personal Branding", logo: "https://socialmasla-pm.pages.dev/pm/assets/tools_covered/compressed/linkedin_ads.jpg" },
-  { name: "Meta Pixel", category: "Attribution & CAPI", logo: "https://socialmasla-pm.pages.dev/pm/assets/tools_covered/compressed/google_tag_manager.jpg" },
-  { name: "AI Automation", category: "n8n & Workflows", logo: "https://socialmasla-pm.pages.dev/pm/assets/tools_covered/compressed/n8n.jpg" },
+export const fourWays: GrowthWay[] = [
+  {
+    id: "01",
+    name: "GTM STRATEGY",
+    headline: "Before spending money, know where you're going.",
+    body: "A good product can fail with bad positioning. I help businesses think through:\n• Who are we targeting?\n• Why should they care?\n• What message will make them act?\n• Which channels should we test first?",
+    punchline: "The objective is simple: Reduce guesswork before increasing spend.",
+    emoji: "🎯",
+    bullets: [
+      "Ideal Customer Profile (ICP) & Buyer Intent",
+      "Positioning & Message-Market Fit",
+      "Channel Prioritization & Sequencing",
+      "Budget Allocation Hypotheses"
+    ],
+  },
+  {
+    id: "02",
+    name: "PERFORMANCE MARKETING",
+    headline: "If we're spending money, we should know what we're getting back.",
+    body: "I work on performance campaigns across lead generation, e-commerce and customer acquisition.\n\nBut I don't believe in running ads just because “the campaign got 2 million impressions.”\n\nCool. Did the business grow? That's the question.",
+    punchline: "I focus on metrics that actually affect the business: CPL • CAC • Conversion Rate • ROAS • Revenue. Marketing should be measurable. Period.",
+    emoji: "📈",
+    bullets: [
+      "Meta Ads & Multi-Channel Paid Campaigns",
+      "Continuous A/B Angle & Creative Testing",
+      "CAPI & Full-Funnel Conversion Tracking",
+      "Predictable ROAS & Cost-per-Lead Scaling"
+    ],
+  },
+  {
+    id: "03",
+    name: "AI-POWERED CAMPAIGNS",
+    headline: "AI doesn't replace creativity. It multiplies experimentation.",
+    body: "I use AI across creative ideation, copywriting, scripting, visual production, creative testing, and campaign experimentation.\n\nThe advantage? Test more ideas. Move faster. Learn quicker. Instead of spending weeks producing one campaign, we can explore multiple directions and identify what actually works.",
+    punchline: "AI is not the strategy. Knowing what to test is.",
+    emoji: "⚡",
+    bullets: [
+      "Rapid Hook & Angle Ideation",
+      "AI Visuals, Video Scripts & Audio (Suno AI)",
+      "Multi-Variant Campaign Experimentation",
+      "Fast Turnaround Creative Iteration"
+    ],
+  },
+  {
+    id: "04",
+    name: "LINKEDIN DISTRIBUTION",
+    headline: "Your profile shouldn't just be an online resume.",
+    body: "Most founders and professionals treat LinkedIn as a passive CV. I turn it into an active distribution and inbound acquisition engine that breaks generic patterns and builds durable authority.",
+    punchline: "Turn founder authority into an inbound lead-generation engine.",
+    emoji: "🔵",
+    bullets: [
+      "Scroll-Stopping Founder Content",
+      "Pattern-Interrupt Positioning",
+      "Inbound Profile Funnel Architecture",
+      "High-Value Discovery DMs & Leads"
+    ],
+  },
 ];
 
-export const whyWorkFramework = [
-  { step: "01", name: "The Idea", desc: "Finding the unique angle that makes people stop scrolling." },
-  { step: "02", name: "The Creative", desc: "AI-assisted visuals, video scripts, and high-converting copy." },
-  { step: "03", name: "The Audience", desc: "Pinpoint targeting, buyer psychology, and intent analysis." },
-  { step: "04", name: "The Funnel", desc: "Frictionless landing pages and smooth conversion paths." },
-  { step: "05", name: "The Data", desc: "Pixel tracking, UTM attribution, and real-time ROAS feedback." },
-  { step: "06", name: "The Result", desc: "Measurable revenue, verified leads, and predictable scaling." },
-];
+export const linkedInFramework = {
+  headline: "LINKEDIN IS MY PLAYGROUND.",
+  subheadline: "BUT I DON'T TREAT IT LIKE EVERYONE ELSE.",
+  intro: "LinkedIn is a professional platform. Which means people expect:",
+  cliches: [
+    "Corporate announcements",
+    "Generic motivation",
+    "“5 lessons my CEO taught me”",
+    "The same recycled carousel"
+  ],
+  punchline: "And that's exactly why I believe in breaking the pattern.\n\nGive people something they don't expect—while still giving them something valuable.\n\nThat's how attention works.",
+  steps: [
+    {
+      num: "01",
+      title: "STOP THE SCROLL",
+      desc: "The first job of content is simple. Make people stop."
+    },
+    {
+      num: "02",
+      title: "CREATE A POINT OF VIEW",
+      desc: "Don't sound like everyone. Have an opinion. Even if some people disagree. Because nobody remembers safe content."
+    },
+    {
+      num: "03",
+      title: "BUILD TRUST",
+      desc: "Attention without credibility is temporary. The content needs to show: What you know. What you've done. How you think."
+    },
+    {
+      num: "04",
+      title: "TURN ATTENTION INTO OPPORTUNITY",
+      desc: "Getting impressions is not the final goal. The goal is to create: Conversations → Relationships → Opportunities → Leads."
+    }
+  ],
+  bottomQuote: "Your LinkedIn shouldn't just be your online resume. It can become your distribution and lead-generation engine.",
+  stats: [
+    { value: "1M+", label: "Impressions Generated" },
+    { value: "100+", label: "Inbound Conversations" },
+    { value: "50+", label: "Opportunities Created" }
+  ]
+};
 
-export const linkedInPillars = [
-  { title: "Your Credibility Engine", desc: "Prove you know your craft before you even hop on a discovery call." },
-  { title: "Your Content Platform", desc: "Turn raw thoughts into high-engagement thought leadership posts." },
-  { title: "Your Networking Tool", desc: "Connect directly with decision-makers, founders, and investors." },
-  { title: "Your Inbound Lead Generator", desc: "Wake up to qualified DMs from people who already want what you do." },
-];
+export const aboutPhilosophy = {
+  whyHeader: "SO, WHY WORK WITH ME?",
+  whyText: "Because I probably won't tell you:\n\n“This is how everyone in the industry does it.”\n\nI'm naturally curious about things that haven't been tested yet. I like experimenting. I like taking creative risks. And I like finding answers through data instead of assumptions.\n\nSometimes the experiment works. Sometimes it doesn't.\n\nBut either way: We learn something. And that learning helps us build the next campaign better.",
+  philosophyHeader: "MY MARKETING PHILOSOPHY",
+  philosophyPoints: [
+    "Be creative enough to stand out.",
+    "Be smart enough to measure everything.",
+    "Be curious enough to keep experimenting."
+  ],
+  pillars: "GTM Strategy • Performance Marketing • AI Campaigns • LinkedIn Growth",
+  ctaHeadline: "GOT SOMETHING WORTH GROWING?",
+  targets: [
+    "A product.",
+    "A business.",
+    "A campaign.",
+    "Or a personal brand."
+  ],
+  ctaBody: "Let's figure out how to get it in front of the right people—and make sure the results actually make sense."
+};

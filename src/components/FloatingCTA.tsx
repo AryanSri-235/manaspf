@@ -36,7 +36,7 @@ export default function FloatingCTA() {
     >
       <button
         type="button"
-        onClick={() => scrollTo("contact-section")}
+        onClick={() => scrollTo("about-cta")}
         className="relative flex items-center gap-2.5 pl-4 pr-5 py-3 md:py-3.5 rounded-full bg-primary hover:bg-primary/95 text-white shadow-xl transition-all duration-300 hover:scale-105 active:scale-95 ring-1 ring-primary/20 group cursor-pointer"
         aria-label="Work With Me"
       >
