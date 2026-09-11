@@ -31,7 +31,7 @@ export default function HeroSection() {
             </div>
 
             {/* Headline */}
-            <h1 className="text-3xl sm:text-4xl lg:text-[2.65rem] font-black text-slate-900 leading-[1.12] tracking-tight mb-4">
+            <h1 className="text-3xl sm:text-4xl lg:text-[2.65rem] font-bold text-slate-900 leading-[1.12] tracking-tight mb-4">
               {portfolioConfig.heroHeadline}{" "}
               <span className="text-primary block mt-1">
                 {portfolioConfig.heroHeadlineAccent}
@@ -120,7 +120,7 @@ export default function HeroSection() {
 
             {/* Sub-photo Profile Title */}
             <div className="mt-2.5 text-center w-full">
-              <h3 className="text-base sm:text-lg font-black text-slate-900 tracking-tight leading-none mb-1">
+              <h3 className="text-base sm:text-lg font-bold text-slate-900 tracking-tight leading-none mb-1">
                 Manas Srivastava
               </h3>
               <p className="text-slate-500 font-medium text-[11px] leading-tight">

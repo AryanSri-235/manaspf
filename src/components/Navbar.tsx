@@ -43,7 +43,7 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="text-xl font-black text-slate-900 tracking-tight hover:text-primary transition-colors cursor-pointer"
+          className="text-xl font-bold text-slate-900 tracking-tight hover:text-primary transition-colors cursor-pointer"
         >
           {portfolioConfig.name}
         </button>

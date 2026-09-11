@@ -21,7 +21,7 @@ export default function FourWaysSection() {
             <div className="inline-block px-3.5 py-1 rounded-full bg-blue-50 text-primary text-xs font-bold uppercase tracking-widest mb-4 shadow-2xs">
               Core Capabilities
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-4">
               Four Ways I Help <span className="text-primary">Businesses Grow.</span>
             </h2>
             <p className="text-slate-600 text-base sm:text-lg font-medium max-w-2xl mx-auto leading-relaxed">
@@ -64,7 +64,7 @@ export default function FourWaysSection() {
                     </div>
 
                     {/* Headline */}
-                    <h3 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight mb-3">
+                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight mb-3">
                       {item.headline}
                     </h3>
 
