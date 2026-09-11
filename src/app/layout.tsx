@@ -1,18 +1,20 @@
 import type { Metadata } from "next";
-import { Inter, Outfit } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { portfolioConfig } from "@/data/portfolioData";
 
-const inter = Inter({
-  subsets: ["latin"],
+const inter = localFont({
+  src: "../../public/fonts/inter-var.woff2",
   variable: "--font-inter",
   display: "swap",
+  weight: "100 900",
 });
 
-const outfit = Outfit({
-  subsets: ["latin"],
+const outfit = localFont({
+  src: "../../public/fonts/outfit-var.woff2",
   variable: "--font-outfit",
   display: "swap",
+  weight: "100 900",
 });
 
 export const metadata: Metadata = {

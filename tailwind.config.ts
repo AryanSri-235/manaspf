@@ -17,8 +17,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        outfit: ["var(--font-outfit)", "system-ui", "sans-serif"],
+        sans: ["'Inter'", "var(--font-inter)", "system-ui", "sans-serif"],
+        outfit: ["'Outfit'", "var(--font-outfit)", "system-ui", "sans-serif"],
       },
       keyframes: {
         "brands-scroll": {
