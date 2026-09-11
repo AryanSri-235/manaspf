@@ -1,4 +1,4 @@
-﻿export interface ProofCaseStudy {
+export interface ProofCaseStudy {
   id: string;
   number: string;
   tag: string;
@@ -24,8 +24,8 @@ export const portfolioConfig = {
   name: "MANAS",
   fullName: "Manas Srivastava",
   role: "GTM Strategy | Performance | AI Campaigns | LinkedIn",
-  heroHeadline: "I DON'T FOLLOW THE MARKETING PLAYBOOK.",
-  heroHeadlineAccent: "I TEST IT, BREAK IT, AND FIND WHAT WORKS.",
+  heroHeadline: "I Build Growth Campaigns That People Notice.",
+  heroHeadlineAccent: "And Businesses Can Measure.",
   heroSubtext: "I work at the intersection of GTM Strategy, Performance Marketing, AI-powered Campaigns and LinkedIn Personal Branding.\n\nThe goal isn't just to make something look good or get attention.\n\nThe goal is to know whether it generated leads, revenue, growth—or absolutely nothing.\n\nBecause if you can't measure marketing, you're mostly guessing.",
   heroTagline: "Creative thinking × Data × AI × Experimentation",
   coreStatement: "Creative enough to get attention.\nData-driven enough to prove it worked.",
