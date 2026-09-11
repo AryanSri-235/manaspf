@@ -1,140 +1,149 @@
 "use client";
 
 import React from "react";
-import { ExternalLink } from "lucide-react";
-import { linkedInFramework, portfolioConfig } from "@/data/portfolioData";
+import { ArrowRight, ExternalLink, ShieldCheck, FileText, Share2, Zap } from "lucide-react";
+import { portfolioConfig } from "@/data/portfolioData";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 
 export default function LinkedInBrandingSection() {
+  const pillars = [
+    {
+      icon: ShieldCheck,
+      title: "Your Credibility Engine",
+      desc: "Prove you know your craft before you even hop on a discovery call.",
+    },
+    {
+      icon: FileText,
+      title: "Your Content Platform",
+      desc: "Turn raw thoughts into high-engagement thought leadership posts.",
+    },
+    {
+      icon: Share2,
+      title: "Your Networking Tool",
+      desc: "Connect directly with decision-makers, founders, and investors.",
+    },
+    {
+      icon: Zap,
+      title: "Your Inbound Lead Generator",
+      desc: "Wake up to qualified DMs from people who already want what you do.",
+    },
+  ];
+
   return (
     <section
       id="linkedin"
-      className="min-h-screen lg:h-screen flex flex-col justify-center py-16 lg:py-6 bg-white border-b border-slate-200/80 section-overflow-guard"
+      className="min-h-screen flex flex-col justify-center py-16 lg:py-24 bg-white border-b border-slate-200/80 section-overflow-guard"
     >
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 max-w-7xl w-full my-auto">
         {/* Section Header */}
         <ScrollReveal>
-          <div className="max-w-3xl mb-6 sm:mb-7">
-            <div className="inline-block px-3.5 py-1 rounded-full bg-blue-50 text-primary text-xs font-semibold tracking-wide mb-2.5">
-              Scroll 04 · High-Leverage Distribution
+          <div className="max-w-3xl mb-12">
+            <div className="inline-block px-4 py-1.5 rounded-full bg-blue-50 text-primary text-xs font-black uppercase tracking-widest mb-4">
+              LinkedIn Personal Branding
             </div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight leading-tight mb-2">
-              {linkedInFramework.headline}{" "}
-              <span className="text-primary">
-                {linkedInFramework.subheadline}
-              </span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight mb-4 leading-[1.08]">
+              Your LinkedIn Profile Is Probably{" "}
+              <span className="text-primary">Underperforming.</span>
             </h2>
+            <p className="text-base sm:text-lg text-slate-600 font-medium leading-relaxed max-w-2xl">
+              Most professionals and founders use LinkedIn as an online resume.{" "}
+              <strong className="text-slate-900 font-bold">I believe it can be much more.</strong>
+            </p>
           </div>
         </ScrollReveal>
 
-        {/* 2-Column Main Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-6 items-stretch mb-5">
-          {/* Left Column: The Pattern Breaker */}
-          <ScrollReveal
-            duration={0.65}
-            className="lg:col-span-5 flex flex-col justify-between p-5 sm:p-6 rounded-3xl bg-slate-950 text-white shadow-md"
-          >
-            <div>
-              <p className="text-[11px] font-bold uppercase tracking-wider text-primary mb-1.5">
-                The Pattern-Interrupt Thesis
-              </p>
-              <h3 className="text-sm sm:text-base font-bold tracking-tight mb-3 text-white">
-                {linkedInFramework.intro}
-              </h3>
-
-              {/* What people expect (The Cliches) */}
-              <div className="space-y-1.5 mb-4">
-                {linkedInFramework.cliches.map((item, idx) => (
-                  <div
-                    key={idx}
-                    className="flex items-center gap-2 p-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 text-[11px] sm:text-xs font-normal"
-                  >
-                    <span className="text-red-400 font-bold shrink-0">❌</span>
-                    <span className="truncate">{item}</span>
-                  </div>
-                ))}
-              </div>
-
-              {/* Why break the pattern */}
-              <div className="p-3 rounded-2xl bg-primary/10 border border-primary/20 text-slate-200 text-xs font-normal leading-relaxed mb-3">
-                {linkedInFramework.punchline.split("\n\n")[0]}
-              </div>
-            </div>
-
-            {/* Banner Preview */}
-            <div className="relative rounded-xl overflow-hidden border border-slate-800 shadow-sm max-h-[75px] group">
-              <img
-                src="/assets/manas/manas_banner.png"
-                alt="Manas Srivastava LinkedIn banner"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-          </ScrollReveal>
-
-          {/* Right Column: The 4-Step Approach (Image 1 Style: clean cards with soft badges) */}
+        {/* 2-Column Main Layout (Inspired by manaspf.vercel.app) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+          {/* Left Column (7 cols): 2x2 Pillars Grid */}
           <div className="lg:col-span-7 flex flex-col justify-between">
             <StaggerContainer
-              staggerDelay={0.06}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3"
+              staggerDelay={0.08}
+              className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full"
             >
-              {linkedInFramework.steps.map((step) => (
-                <StaggerItem key={step.num}>
-                  <div className="p-4 rounded-2xl bg-slate-50/80 border border-slate-200/80 shadow-2xs hover:shadow-sm hover:border-primary/40 hover:bg-blue-50/20 transition-all flex gap-3 items-start group h-full">
-                    <span className="w-8 h-8 rounded-xl bg-white border border-slate-200 text-primary font-bold text-xs flex items-center justify-center shrink-0 shadow-2xs group-hover:scale-105 transition-transform">
-                      {step.num}
-                    </span>
-                    <div>
-                      <h4 className="text-xs sm:text-sm font-bold text-slate-900 mb-1 leading-snug">
-                        {step.title}
-                      </h4>
-                      <p className="text-[11px] sm:text-xs text-slate-600 font-normal leading-relaxed">
-                        {step.desc}
-                      </p>
+              {pillars.map((item, idx) => {
+                const Icon = item.icon;
+                return (
+                  <StaggerItem key={idx}>
+                    <div className="p-5 lg:p-6 rounded-3xl bg-slate-50/90 border border-slate-200/80 shadow-xs hover:shadow-md hover:border-primary/40 hover:bg-blue-50/40 transition-all flex flex-col justify-between group h-full">
+                      <div className="w-12 h-12 rounded-2xl bg-white shadow-xs border border-slate-100 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <Icon className="text-primary" size={24} strokeWidth={2.2} />
+                      </div>
+                      <div>
+                        <h3 className="text-base sm:text-lg font-black text-slate-900 mb-1.5 leading-snug">
+                          {item.title}
+                        </h3>
+                        <p className="text-xs sm:text-sm text-slate-500 font-medium leading-relaxed">
+                          {item.desc}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                </StaggerItem>
-              ))}
+                  </StaggerItem>
+                );
+              })}
             </StaggerContainer>
+          </div>
 
-            {/* Quote callout */}
-            <ScrollReveal duration={0.6} yOffset={14}>
-              <div className="p-3.5 rounded-2xl bg-blue-50/70 border border-blue-100 text-xs font-normal text-slate-700 text-left">
-                💡 <span className="text-primary font-semibold">Core Rule:</span> {linkedInFramework.bottomQuote}
+          {/* Right Column (5 cols): Banner Card + Inbound Optimization Card */}
+          <div className="lg:col-span-5 flex flex-col justify-between gap-5 w-full">
+            {/* Banner Preview Card */}
+            <ScrollReveal duration={0.65} yOffset={20}>
+              <div className="relative w-full rounded-3xl overflow-hidden border-4 border-slate-900 shadow-2xl bg-slate-950 group">
+                <img
+                  src="/assets/manas/manas_banner.png"
+                  alt="Manas Srivastava LinkedIn banner"
+                  className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-4 left-5 right-5 z-20 flex items-center justify-between">
+                  <div>
+                    <p className="text-white font-bold text-sm">Manas Srivastava</p>
+                    <p className="text-slate-400 text-xs font-semibold">
+                      1M+ Impressions · Founder-Led Growth
+                    </p>
+                  </div>
+                  <a
+                    href={portfolioConfig.linkedinUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 rounded-full bg-white text-slate-900 text-xs font-black uppercase tracking-wider shadow-md hover:bg-primary hover:text-white transition-all flex items-center gap-1.5 cursor-pointer"
+                  >
+                    View Profile <ArrowRight size={14} />
+                  </a>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* Inbound Optimization Card */}
+            <ScrollReveal duration={0.65} delay={0.1} yOffset={20}>
+              <div className="w-full p-6 lg:p-8 rounded-3xl bg-slate-50 border border-slate-200/90 shadow-sm flex flex-col justify-center items-center text-center flex-grow">
+                <span className="text-[11px] font-black uppercase tracking-widest text-primary mb-2">
+                  Inbound Optimization
+                </span>
+                <h4 className="text-xl lg:text-2xl font-black text-slate-900 mb-2">
+                  Let&apos;s Build It Properly.
+                </h4>
+                <p className="text-xs sm:text-sm text-slate-600 font-medium mb-6 max-w-sm">
+                  Turn your dormant profile into a predictable, inbound lead generation engine.
+                </p>
+                <a
+                  href={portfolioConfig.linkedinUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary w-full py-4 px-8 text-base font-bold shadow-lg shadow-primary/30 inline-flex items-center justify-center gap-2.5 cursor-pointer"
+                >
+                  Audit My LinkedIn <ExternalLink size={18} />
+                </a>
+                <p className="text-xs font-bold text-slate-600 mt-4">
+                  DM “PROFILE” for a free 3-point breakdown
+                </p>
+                <div className="mt-3 flex items-center gap-2 text-xs font-bold text-slate-400">
+                  <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                  Actively auditing 5 founder profiles every month
+                </div>
               </div>
             </ScrollReveal>
           </div>
         </div>
-
-        {/* Small Proof Area (Real Numbers) & CTA Bar */}
-        <ScrollReveal duration={0.65} yOffset={18}>
-          <div className="p-4 sm:p-5 rounded-2xl bg-slate-50/80 border border-slate-200/80 shadow-xs flex flex-col sm:flex-row items-center justify-between gap-4">
-            {/* Stat Counters */}
-            <div className="grid grid-cols-3 gap-6 text-center sm:text-left">
-              {linkedInFramework.stats.map((st, sIdx) => (
-                <div key={sIdx}>
-                  <p className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight leading-tight">
-                    {st.value}
-                  </p>
-                  <p className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">
-                    {st.label}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            {/* Action Buttons */}
-            <div className="flex items-center gap-2.5 w-full sm:w-auto justify-end">
-              <a
-                href={portfolioConfig.linkedinUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary py-2 px-5 text-xs font-semibold shadow-xs inline-flex items-center justify-center gap-1.5 cursor-pointer"
-              >
-                Audit My LinkedIn <ExternalLink size={13} />
-              </a>
-            </div>
-          </div>
-        </ScrollReveal>
       </div>
     </section>
   );

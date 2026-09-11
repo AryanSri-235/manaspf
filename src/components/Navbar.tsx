@@ -38,7 +38,7 @@ export default function Navbar() {
           : "bg-white/85 backdrop-blur-md border-b border-slate-100 py-3.5"
       }`}
     >
-      <div className="container mx-auto px-6 max-w-7xl flex items-center justify-between">
+      <div className="container mx-auto px-6 max-w-6xl flex items-center justify-between">
         {/* Brand */}
         <button
           type="button"
@@ -49,7 +49,7 @@ export default function Navbar() {
         </button>
 
         {/* Center: GTM Strategy | Performance | AI Campaigns | LinkedIn */}
-        <nav className="hidden md:flex items-center gap-2 bg-slate-50/90 border border-slate-200/80 px-4 py-1.5 rounded-full shadow-xs text-xs font-medium text-slate-600">
+        <nav className="hidden md:flex items-center gap-2 bg-slate-50/90 border border-slate-200/80 px-4 py-1.5 rounded-full shadow-xs text-xs font-bold text-slate-600">
           <button
             type="button"
             onClick={() => handleNavClick("what-i-do")}
@@ -88,7 +88,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => handleNavClick("about-cta")}
-            className="btn-primary py-2 px-5 text-xs font-medium shadow-sm hover:shadow-md cursor-pointer inline-flex items-center gap-1.5"
+            className="btn-primary py-2 px-5 text-xs font-bold shadow-sm hover:shadow-md cursor-pointer inline-flex items-center gap-1.5"
           >
             Let&apos;s Talk <ArrowRight size={14} />
           </button>
