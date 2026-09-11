@@ -41,7 +41,7 @@ export default function LinkedInBrandingSection() {
             <div className="inline-block px-3.5 py-1 rounded-full bg-blue-50 text-primary text-xs font-bold uppercase tracking-widest mb-3 shadow-2xs">
               LinkedIn Personal Branding
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-3 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-3 leading-tight">
               Your LinkedIn Profile Is Probably{" "}
               <span className="text-primary">Underperforming.</span>
             </h2>
@@ -76,7 +76,7 @@ export default function LinkedInBrandingSection() {
                     >
                       <Icon size={22} strokeWidth={2.2} />
                     </div>
-                    <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-2 leading-snug tracking-tight">
+                    <h3 className="text-base sm:text-lg font-black text-slate-900 mb-2 leading-snug tracking-tight">
                       {item.title}
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-500 font-normal leading-relaxed">
@@ -96,7 +96,7 @@ export default function LinkedInBrandingSection() {
               <span className="text-xs font-bold uppercase tracking-widest text-primary mb-2 block">
                 Inbound Optimization
               </span>
-              <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight mb-2">
+              <h3 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight mb-2">
                 Let&apos;s Build It Properly.
               </h3>
               <p className="text-sm sm:text-base text-slate-500 font-normal leading-relaxed mb-4">

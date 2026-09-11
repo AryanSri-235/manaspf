@@ -36,7 +36,7 @@ export default function CaseStudiesSection() {
             <div className="inline-block px-3.5 py-1 rounded-full bg-blue-50 text-primary text-xs font-bold uppercase tracking-widest mb-3 shadow-2xs">
               Proven Execution
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-3">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-3">
               Things I&apos;ve Built, Tested &amp;{" "}
               <span className="text-primary">
                 Broken Down.
@@ -79,7 +79,7 @@ export default function CaseStudiesSection() {
                     </div>
 
                     {/* Title & Subtitle */}
-                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight mb-2">
+                    <h3 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight mb-2">
                       {study.title}
                     </h3>
 
@@ -130,7 +130,7 @@ export default function CaseStudiesSection() {
                 <Flame size={20} className="text-amber-400 fill-amber-400" />
               </span>
               <div>
-                <p className="text-base sm:text-lg font-bold tracking-tight text-white">
+                <p className="text-base sm:text-lg font-black tracking-tight text-white">
                   Views are nice. <span className="text-primary">Revenue is nicer.</span>
                 </p>
                 <p className="text-xs text-slate-400 font-normal">

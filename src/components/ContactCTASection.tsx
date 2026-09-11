@@ -55,7 +55,7 @@ export default function ContactCTASection() {
               </div>
 
               {/* Headline */}
-              <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-8 leading-tight text-white">
+              <h2 className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight mb-8 leading-tight text-white">
                 Have Something You <br />
                 <span className="text-primary">Want To Grow?</span>
               </h2>
@@ -89,7 +89,7 @@ export default function ContactCTASection() {
                 </p>
               </div>
 
-              <p className="text-2xl sm:text-3xl font-bold text-white mb-8 tracking-tight">
+              <p className="text-2xl sm:text-3xl font-black text-white mb-8 tracking-tight">
                 Let&apos;s talk.
               </p>
 
@@ -116,14 +116,14 @@ export default function ContactCTASection() {
 
               {/* Direct Inquiry Form */}
               <div className="bg-slate-900/90 border border-slate-800 rounded-[2.5rem] p-6 sm:p-10 text-left shadow-xl">
-                <h3 className="text-lg sm:text-xl font-bold text-white mb-4 text-center sm:text-left">
+                <h3 className="text-lg sm:text-xl font-black text-white mb-4 text-center sm:text-left">
                   Or drop a quick message here:
                 </h3>
 
                 {submitted ? (
                   <div className="text-center py-6">
                     <CheckCircle2 size={44} className="text-primary mx-auto mb-3" />
-                    <h4 className="text-xl font-bold text-white mb-1">Inquiry Sent</h4>
+                    <h4 className="text-xl font-black text-white mb-1">Inquiry Sent</h4>
                     <p className="text-xs text-slate-400 font-normal">
                       Thanks for reaching out! Manas will review your message and reply promptly.
                     </p>
