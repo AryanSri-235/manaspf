@@ -36,7 +36,7 @@ export default function CaseStudiesSection() {
             <div className="inline-block px-3.5 py-1 rounded-full bg-blue-50 text-primary text-xs font-bold uppercase tracking-widest mb-3 shadow-2xs">
               Proven Execution
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-3">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-4">
               Things I&apos;ve Built, Tested &amp;{" "}
               <span className="text-primary">
                 Broken Down.
@@ -79,7 +79,7 @@ export default function CaseStudiesSection() {
                     </div>
 
                     {/* Title & Subtitle */}
-                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight mb-2">
+                    <h3 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight mb-2">
                       {study.title}
                     </h3>
 

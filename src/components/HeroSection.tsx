@@ -120,7 +120,7 @@ export default function HeroSection() {
 
             {/* Sub-photo Profile Title */}
             <div className="mt-2.5 text-center w-full">
-              <h3 className="text-base sm:text-lg font-bold text-slate-900 tracking-tight leading-none mb-1">
+              <h3 className="text-base sm:text-lg font-black text-slate-900 tracking-tight leading-none mb-1">
                 Manas Srivastava
               </h3>
               <p className="text-slate-500 font-medium text-[11px] leading-tight">

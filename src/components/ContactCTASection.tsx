@@ -58,7 +58,7 @@ export default function ContactCTASection() {
                   </div>
 
                   {/* Headline */}
-                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-4 leading-tight text-slate-900">
+                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight mb-4 leading-tight text-slate-900">
                     Have Something You <br className="hidden sm:inline" />
                     <span className="text-primary">Want To Grow?</span>
                   </h2>
@@ -119,7 +119,7 @@ export default function ContactCTASection() {
               <div className="lg:col-span-6">
                 <div className="bg-white border border-slate-200/80 rounded-3xl p-5 sm:p-7 text-left shadow-sm">
                   <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-base sm:text-lg font-bold text-slate-900">
+                    <h3 className="text-base sm:text-lg font-black text-slate-900">
                       Drop a quick message:
                     </h3>
                     <span className="text-[11px] font-medium text-slate-400">
