@@ -50,46 +50,46 @@ export default function ContactCTASection() {
 
             <div className="relative z-10 max-w-3xl mx-auto text-center">
               {/* Pill Badge */}
-              <div className="inline-block px-4 py-1 rounded-full bg-slate-900 border border-slate-800 text-primary text-xs font-black uppercase tracking-widest mb-6">
+              <div className="inline-block px-3.5 py-1 rounded-full bg-slate-900 border border-slate-800 text-primary text-xs font-bold uppercase tracking-widest mb-6 shadow-2xs">
                 Ready To Scale
               </div>
 
               {/* Headline */}
-              <h2 className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight mb-8 leading-tight">
+              <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-8 leading-tight text-white">
                 Have Something You <br />
                 <span className="text-primary">Want To Grow?</span>
               </h2>
 
               {/* 4 Targets Grid */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8 text-slate-300 font-bold text-sm sm:text-base">
-                <div className="p-3.5 rounded-2xl bg-slate-900/90 border border-slate-800/80 shadow-xs">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8 text-slate-300 font-medium text-sm sm:text-base">
+                <div className="p-3.5 rounded-2xl bg-slate-900/90 border border-slate-800/80 shadow-2xs">
                   A business.
                 </div>
-                <div className="p-3.5 rounded-2xl bg-slate-900/90 border border-slate-800/80 shadow-xs">
+                <div className="p-3.5 rounded-2xl bg-slate-900/90 border border-slate-800/80 shadow-2xs">
                   A campaign.
                 </div>
-                <div className="p-3.5 rounded-2xl bg-slate-900/90 border border-slate-800/80 shadow-xs">
+                <div className="p-3.5 rounded-2xl bg-slate-900/90 border border-slate-800/80 shadow-2xs">
                   A personal brand.
                 </div>
-                <div className="p-3.5 rounded-2xl bg-slate-900/90 border border-slate-800/80 shadow-xs">
+                <div className="p-3.5 rounded-2xl bg-slate-900/90 border border-slate-800/80 shadow-2xs">
                   An idea.
                 </div>
               </div>
 
-              {/* Curiosity / Philosophy Quote */}
+              {/* Curiosity / Philosophy Quote (Styled like SocialMasla callout) */}
               <div className="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 text-left mb-8 space-y-3">
-                <p className="text-sm font-semibold text-primary uppercase tracking-wider">
+                <p className="text-xs font-bold text-primary uppercase tracking-widest">
                   Why Work With Me?
                 </p>
-                <blockquote className="text-base sm:text-lg font-bold text-white italic border-l-2 border-primary pl-3">
+                <blockquote className="text-base sm:text-lg font-medium text-white italic border-l-2 border-primary pl-4">
                   “Because I probably won&apos;t tell you: ‘This is how everyone in the industry does it.’”
                 </blockquote>
-                <p className="text-xs sm:text-sm text-slate-300 font-medium leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-400 font-normal leading-relaxed">
                   I like experimenting. I like taking creative risks. And I like finding answers through data instead of assumptions.
                 </p>
               </div>
 
-              <p className="text-2xl sm:text-3xl font-black text-white mb-8">
+              <p className="text-2xl sm:text-3xl font-bold text-white mb-8 tracking-tight">
                 Let&apos;s talk.
               </p>
 
@@ -99,18 +99,18 @@ export default function ContactCTASection() {
                   href={portfolioConfig.linkedinUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary py-4 px-8 text-base font-bold shadow-xl shadow-primary/30 inline-flex items-center gap-2 w-full sm:w-auto justify-center cursor-pointer"
+                  className="btn-primary py-3.5 px-8 text-sm sm:text-base font-semibold shadow-xl shadow-primary/25 inline-flex items-center gap-2 w-full sm:w-auto justify-center cursor-pointer"
                 >
-                  Connect on LinkedIn <ExternalLink size={18} />
+                  Connect on LinkedIn <ExternalLink size={17} />
                 </a>
 
                 <a
                   href={portfolioConfig.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 px-8 rounded-full text-base shadow-lg shadow-emerald-900/30 inline-flex items-center justify-center gap-2 w-full sm:w-auto cursor-pointer transition-all hover:scale-105"
+                  className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3.5 px-8 rounded-full text-sm sm:text-base shadow-lg shadow-emerald-900/25 inline-flex items-center justify-center gap-2 w-full sm:w-auto cursor-pointer transition-all hover:scale-105"
                 >
-                  <MessageCircle size={18} /> Chat on WhatsApp
+                  <MessageCircle size={17} /> Chat on WhatsApp
                 </a>
               </div>
 
@@ -132,7 +132,7 @@ export default function ContactCTASection() {
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1.5">
+                        <label className="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1.5">
                           Your Name
                         </label>
                         <input
@@ -141,11 +141,11 @@ export default function ContactCTASection() {
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                           placeholder="Jane Doe"
-                          className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-primary text-sm font-medium"
+                          className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-primary text-sm font-normal"
                         />
                       </div>
                       <div>
-                        <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1.5">
+                        <label className="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1.5">
                           Work Email
                         </label>
                         <input
@@ -154,19 +154,19 @@ export default function ContactCTASection() {
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                           placeholder="jane@company.com"
-                          className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-primary text-sm font-medium"
+                          className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-primary text-sm font-normal"
                         />
                       </div>
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1.5">
+                      <label className="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1.5">
                         What Are You Looking To Grow?
                       </label>
                       <select
                         value={formData.growthType}
                         onChange={(e) => setFormData({ ...formData, growthType: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white focus:outline-none focus:border-primary text-sm font-medium"
+                        className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white focus:outline-none focus:border-primary text-sm font-normal"
                       >
                         <option value="A business">A business</option>
                         <option value="A campaign">A campaign</option>
@@ -176,7 +176,7 @@ export default function ContactCTASection() {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1.5">
+                      <label className="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1.5">
                         Project Details / Timeline
                       </label>
                       <textarea
@@ -185,14 +185,14 @@ export default function ContactCTASection() {
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         placeholder="What is your current growth bottleneck, ad budget, or timeline?"
-                        className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-primary text-sm font-medium"
+                        className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-primary text-sm font-normal"
                       />
                     </div>
 
                     <button
                       type="submit"
                       disabled={loading}
-                      className="btn-primary w-full py-4 text-base shadow-lg shadow-primary/30 inline-flex items-center justify-center gap-2 cursor-pointer font-bold"
+                      className="btn-primary w-full py-3.5 text-sm sm:text-base shadow-lg shadow-primary/25 inline-flex items-center justify-center gap-2 cursor-pointer font-semibold"
                     >
                       {loading ? "Sending..." : "Submit Inquiry"} <Send size={16} />
                     </button>
@@ -202,13 +202,13 @@ export default function ContactCTASection() {
 
               {/* Core Statement Banner */}
               <div className="mt-12 pt-8 border-t border-slate-800 text-center">
-                <p className="text-xl sm:text-2xl font-black text-white leading-snug tracking-tight mb-2">
+                <p className="text-xl sm:text-2xl font-bold text-white leading-snug tracking-tight mb-2">
                   “Creative enough to get attention.{" "}
                   <span className="text-primary block sm:inline">
                     Data-driven enough to prove it worked.”
                   </span>
                 </p>
-                <p className="text-xs font-medium text-slate-400 tracking-wide">
+                <p className="text-xs font-normal text-slate-400 tracking-wide">
                   {portfolioConfig.pillarsSummary}
                 </p>
               </div>

@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <footer className="py-14 bg-slate-950 text-center border-t border-slate-900 mt-0 flex flex-col items-center justify-center relative z-20">
       <div className="container mx-auto px-6 max-w-xl">
-        <p className="text-xl font-black text-white mb-2 tracking-tight">
+        <p className="text-xl font-bold text-white mb-2 tracking-tight">
           {portfolioConfig.name}
         </p>
         <p className="text-slate-400 text-xs sm:text-sm mb-6 font-normal">

@@ -43,13 +43,13 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="text-xl font-black text-slate-950 tracking-tighter hover:text-primary transition-colors cursor-pointer"
+          className="text-xl font-bold text-slate-900 tracking-tight hover:text-primary transition-colors cursor-pointer"
         >
           {portfolioConfig.name}
         </button>
 
         {/* Center: GTM Strategy | Performance | AI Campaigns | LinkedIn */}
-        <nav className="hidden md:flex items-center gap-2 bg-slate-50/90 border border-slate-200/80 px-4 py-1.5 rounded-full shadow-xs text-xs font-bold text-slate-600">
+        <nav className="hidden md:flex items-center gap-2 bg-slate-50/90 border border-slate-200/70 px-4 py-1.5 rounded-full shadow-2xs text-xs font-semibold text-slate-600">
           <button
             type="button"
             onClick={() => handleNavClick("what-i-do")}
@@ -88,7 +88,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => handleNavClick("about-cta")}
-            className="btn-primary py-2 px-5 text-xs font-bold shadow-sm hover:shadow-md cursor-pointer inline-flex items-center gap-1.5"
+            className="btn-primary py-2 px-5 text-xs font-semibold shadow-sm hover:shadow-md cursor-pointer inline-flex items-center gap-1.5"
           >
             Let&apos;s Talk <ArrowRight size={14} />
           </button>
