@@ -30,8 +30,8 @@ export default function HeroSection() {
               </span>
             </div>
 
-            {/* Headline */}
-            <h1 className="text-3xl sm:text-4xl lg:text-[2.65rem] font-bold text-slate-900 leading-[1.12] tracking-tight mb-4">
+            {/* Headline (Matching manaspf.vercel.app font & styling) */}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-black text-slate-900 leading-[1.12] tracking-tight mb-6">
               {portfolioConfig.heroHeadline}{" "}
               <span className="text-primary block mt-1">
                 {portfolioConfig.heroHeadlineAccent}
