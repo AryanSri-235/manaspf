@@ -44,7 +44,7 @@ export default function FloatingCTA() {
           size={20}
           className="transition-transform group-hover:rotate-12 text-white shrink-0"
         />
-        <span className="text-[13px] md:text-sm font-bold whitespace-nowrap leading-none">
+        <span className="text-[13px] md:text-sm font-medium whitespace-nowrap leading-none">
           Work With Me
         </span>
         <span className="absolute inset-0 rounded-full bg-primary/20 animate-ping pointer-events-none -z-10" />

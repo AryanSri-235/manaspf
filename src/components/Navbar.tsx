@@ -34,8 +34,8 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-xs py-3"
-          : "bg-white/60 backdrop-blur-xs py-4"
+          ? "bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-xs py-3"
+          : "bg-white/85 backdrop-blur-md border-b border-slate-100 py-3.5"
       }`}
     >
       <div className="container mx-auto px-6 max-w-7xl flex items-center justify-between">
@@ -49,7 +49,7 @@ export default function Navbar() {
         </button>
 
         {/* Center: GTM Strategy | Performance | AI Campaigns | LinkedIn */}
-        <nav className="hidden md:flex items-center gap-2 bg-slate-50/90 border border-slate-200/80 px-4 py-1.5 rounded-full shadow-xs text-xs font-bold text-slate-600">
+        <nav className="hidden md:flex items-center gap-2 bg-slate-50/90 border border-slate-200/80 px-4 py-1.5 rounded-full shadow-xs text-xs font-medium text-slate-600">
           <button
             type="button"
             onClick={() => handleNavClick("what-i-do")}
@@ -88,7 +88,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => handleNavClick("about-cta")}
-            className="btn-primary py-2 px-5 text-xs font-bold shadow-sm hover:shadow-md cursor-pointer inline-flex items-center gap-1.5"
+            className="btn-primary py-2 px-5 text-xs font-medium shadow-sm hover:shadow-md cursor-pointer inline-flex items-center gap-1.5"
           >
             Let&apos;s Talk <ArrowRight size={14} />
           </button>
@@ -114,7 +114,7 @@ export default function Navbar() {
                 key={link.label}
                 type="button"
                 onClick={() => handleNavClick(link.target)}
-                className="w-full text-left py-2 px-3 rounded-xl text-sm font-bold text-slate-700 hover:bg-blue-50 hover:text-primary transition-all cursor-pointer"
+                className="w-full text-left py-2 px-3 rounded-xl text-sm font-medium text-slate-700 hover:bg-blue-50 hover:text-primary transition-all cursor-pointer"
               >
                 {link.label}
               </button>
@@ -125,7 +125,7 @@ export default function Navbar() {
             <button
               type="button"
               onClick={() => handleNavClick("about-cta")}
-              className="btn-primary w-full py-3 text-sm font-bold justify-center"
+              className="btn-primary w-full py-3 text-sm font-medium justify-center"
             >
               Let&apos;s Talk <ArrowRight size={16} />
             </button>

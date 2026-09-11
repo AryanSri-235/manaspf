@@ -14,11 +14,11 @@ export default function Footer() {
         <p className="text-xl font-black text-white mb-2 tracking-tight">
           {portfolioConfig.name}
         </p>
-        <p className="text-slate-400 text-xs sm:text-sm mb-6">
+        <p className="text-slate-400 text-xs sm:text-sm mb-6 font-normal">
           {portfolioConfig.pillarsSummary}
         </p>
 
-        <div className="flex flex-wrap items-center justify-center gap-6 mb-8 text-xs sm:text-sm font-bold">
+        <div className="flex flex-wrap items-center justify-center gap-6 mb-8 text-xs sm:text-sm font-medium">
           <a
             href={portfolioConfig.linkedinUrl}
             target="_blank"
@@ -50,7 +50,7 @@ export default function Footer() {
           </button>
         </div>
 
-        <p className="text-slate-600 text-xs font-medium">
+        <p className="text-slate-600 text-xs font-normal">
           © {new Date().getFullYear()} {portfolioConfig.fullName}. All rights reserved.
         </p>
       </div>
